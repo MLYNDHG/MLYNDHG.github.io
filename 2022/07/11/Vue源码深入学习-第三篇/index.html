@@ -5,19 +5,17 @@
   
 
   
-  <title>JAVA中间件-Redis | 皮蛋solo粥</title>
+  <title>Vue源码深入学习.第三篇 | 皮蛋solo粥</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Redis 下载安装   JDK版本：至少使用JDK8版本  什么是Redis： 基于内存亦可持久化的日志型 Key-Value数据库 Redis就像是一个HashMap 不在JVM中运行以独立进程的形式运行 当作缓存使用 比数据库(mysql)快，常用的数据放在这里可以提高性能  下载：http:&#x2F;&#x2F;redis.io windows版本的下载地址是： http:&#x2F;&#x2F;redis.io&#x2F;downlo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JAVA中间件-Redis">
-<meta property="og:url" content="http://example.com/2022/06/20/JAVA%E4%B8%AD%E9%97%B4%E4%BB%B6-Redis/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Vue源码深入学习.第三篇">
+<meta property="og:url" content="http://example.com/2022/07/11/Vue%E6%BA%90%E7%A0%81%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%B8%89%E7%AF%87/index.html">
 <meta property="og:site_name" content="皮蛋solo粥">
-<meta property="og:description" content="Redis 下载安装   JDK版本：至少使用JDK8版本  什么是Redis： 基于内存亦可持久化的日志型 Key-Value数据库 Redis就像是一个HashMap 不在JVM中运行以独立进程的形式运行 当作缓存使用 比数据库(mysql)快，常用的数据放在这里可以提高性能  下载：http:&#x2F;&#x2F;redis.io windows版本的下载地址是： http:&#x2F;&#x2F;redis.io&#x2F;downlo">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-20T06:59:57.000Z">
-<meta property="article:modified_time" content="2022-06-20T10:26:16.347Z">
+<meta property="article:published_time" content="2022-07-11T01:41:59.000Z">
+<meta property="article:modified_time" content="2022-07-11T01:43:07.888Z">
 <meta property="article:author" content="杰">
-<meta property="article:tag" content="JAVA">
+<meta property="article:tag" content="Vue源码">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="皮蛋solo粥" type="application/atom+xml">
@@ -67,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-JAVA中间件-Redis" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Vue源码深入学习-第三篇" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2022/06/20/JAVA%E4%B8%AD%E9%97%B4%E4%BB%B6-Redis/" class="article-date">
-  <time datetime="2022-06-20T06:59:57.000Z" itemprop="datePublished">2022-06-20</time>
+    <a href="/2022/07/11/Vue%E6%BA%90%E7%A0%81%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%B8%89%E7%AF%87/" class="article-date">
+  <time datetime="2022-07-11T01:41:59.000Z" itemprop="datePublished">2022-07-11</time>
 </a>
     
   </div>
@@ -81,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JAVA中间件-Redis
+      Vue源码深入学习.第三篇
     </h1>
   
 
@@ -89,68 +87,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><ul>
-<li>下载安装</li>
-</ul>
-<ol>
-<li><p>JDK版本：至少使用JDK8版本</p>
-</li>
-<li><p>什么是Redis：</p>
-<p><code>基于内存亦可持久化的日志型</code> <code>Key-Value数据库</code> <code>Redis就像是一个HashMap</code> <code>不在JVM中运行以独立进程的形式运行</code> <code>当作缓存使用</code> <code>比数据库(mysql)快，常用的数据放在这里可以提高性能</code></p>
-</li>
-<li><p>下载：<a target="_blank" rel="noopener" href="http://redis.io/">http://redis.io</a> windows版本的下载地址是： <a target="_blank" rel="noopener" href="http://redis.io/download">http://redis.io/download</a></p>
-</li>
-</ol>
-<ul>
-<li>使用</li>
-</ul>
-<ol>
-<li><p>服务器开启</p>
-<p>redis-server.exe</p>
-</li>
-<li><p>客户端访问</p>
-<p>redis-cli.exe</p>
-</li>
-</ol>
-<ul>
-<li>常见命令</li>
-</ul>
-<ol>
-<li>​    String（字符串）：<code>set</code>  <code>get</code>  <code>incr</code>  <code>type</code>   <code>ttl</code>   <code>rename</code></li>
-<li>​    List（列表）：<code>lpush</code>  <code>rpush</code>  <code>llen</code>  <code>lrange</code>   <code>lpop</code>   <code>rpop</code></li>
-<li>​    Hash（字典）：<code>hset</code>    <code>hgetall</code>  <code>hkeys</code>  <code>hvals</code> </li>
-<li>​    Set（集合）:<code>SADD</code>   <code>SMEMBERS</code>   </li>
-<li>​    Sorted Set（有序集合）:<code>zadd</code>   <code>zcard</code>  <code>zcount</code></li>
-<li>​    命令手册<a target="_blank" rel="noopener" href="http://www.redis.cn/commands.html">http://www.redis.cn/commands.html</a></li>
-</ol>
-<ul>
-<li>Jedis</li>
-</ul>
-<ol>
-<li>是什么：在java项目代码中使用redis，不仅仅是redis给的客户端中，只需引入jar包即可,即jedis.jar</li>
-<li>使用：javaProject中可直接当作客户端来操作redis，但是redis服务端还是要开启（不然呢？？？）</li>
-</ol>
-<ul>
-<li>集成Spring</li>
-</ul>
-<ol>
-<li>开启redis服务端</li>
-<li>spring配置连接池，连接工厂，注入RedisTemplate ，getBean即可</li>
-</ol>
-<ul>
-<li>可视化redis</li>
-</ul>
-<ol>
-<li>工具redisClient可查看当前连接池的所有数据</li>
-</ol>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/20/JAVA%E4%B8%AD%E9%97%B4%E4%BB%B6-Redis/" data-id="cl4mlemvz0000s8uw38p9cxo9" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/11/Vue%E6%BA%90%E7%A0%81%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%B8%89%E7%AF%87/" data-id="cl5g2xegi0000louwd7bde20z" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue%E6%BA%90%E7%A0%81/" rel="tag">Vue源码</a></li></ul>
 
     </footer>
   </div>
@@ -158,19 +102,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/07/11/Vue%E6%BA%90%E7%A0%81%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%B8%80%E7%AF%87/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/11/Vue%E6%BA%90%E7%A0%81%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E5%9B%9B%E7%AF%87/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Vue源码深入学习.第一篇
+          Vue源码深入学习.第四篇
         
       </div>
     </a>
   
   
-    <a href="/2022/06/20/JAVA%E4%B8%AD%E9%97%B4%E4%BB%B6-Meavn-Git/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/11/Vue%E6%BA%90%E7%A0%81%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AF%87/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">JAVA中间件-Meavn&amp;Git</div>
+      <div class="article-nav-title">Vue源码深入学习.第二篇</div>
     </a>
   
 </nav>
