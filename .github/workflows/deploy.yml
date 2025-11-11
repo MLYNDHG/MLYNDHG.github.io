@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [notes-source]  # ← 监听你的源码分支
+    branches: [notes-source]
   workflow_dispatch:
 
 permissions:
@@ -13,6 +13,8 @@ permissions:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages  # ← 关键！必须加这三行
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
