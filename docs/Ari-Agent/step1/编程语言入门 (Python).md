@@ -1,6 +1,6 @@
 # example
 
-[source](www.baidu.com)
+<!-- [source](www.baidu.com) -->
 
 Plan：天数
 
@@ -77,7 +77,7 @@ Plan：天数
 
 ------
 
-![微信图片_20251111194247](../../../assets/1.jpg)
+![微信图片_20251111194247](/ari-agentImg/1.jpg)
 
 ------
 
