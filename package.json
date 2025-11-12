@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "node scripts/generate-file-info.js && vitepress dev docs",
+    "docs:build": "node scripts/generate-file-info.js && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "generate-info": "node scripts/generate-file-info.js"
   },
   "devDependencies": {
     "vitepress": "v1.6.4"
