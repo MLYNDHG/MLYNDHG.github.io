@@ -6,16 +6,16 @@ hero:
   name: "MLYNDHG"
   text: "学习笔记与技术文档"
   tagline: 记录学习过程，分享技术心得
-  image:
-    src: /1.jpg
-    alt: Banner
+  # image:
+  #   src: /1.jpg
+  #   alt: Banner
   actions:
     - theme: brand
-      text: 开始学习
+      text: 开始
       link: /Ari-Agent/
-    - theme: alt
-      text: Markdown 示例
-      link: /markdown-examples
+    # - theme: alt
+    #   text: Markdown 示例
+    #   link: /markdown-examples
 
 features:
   - title: 技术笔记
